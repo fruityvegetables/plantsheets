@@ -20,6 +20,7 @@
             </header>
             <aside class="sidebar">
                 <h3>Plant Categories</h3>
+                <button onclick="closeMenu()"> X </button>
                 <ul>
                     <li>
                         <a href="index.html">Tropicals</a>
@@ -100,6 +101,9 @@
         <script>
             function openMenu(){
                 document.querySelector(".sidebar").classList.add("open");
+            }
+            function closeMenu(){
+                document.querySelector(".sidebar").classList.remove("open");
             }
         </script>
     </body>
