@@ -1,7 +1,10 @@
 import React from 'react';
-//import logo from './logo.svg';
+import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import data from './data';
+import HomeScreen from './Screens/HomeScreen';
+import ProductScreen from './Screens/ProductScreen';
+
 
 function App() {
 
@@ -12,6 +15,7 @@ function App() {
     document.querySelector(".sidebar").classList.remove("open");
   }
   return (
+    <BrowserRouter>
   <div>
     <div className="grid-container"/>
     <header className="header">
@@ -47,10 +51,12 @@ function App() {
     </aside>
     <main className= "main"/>
         <div className="content"/>
+        <Route path="products/:id" component={ProductScreen}/>
+        <Route path="/" exact={true} component={HomeScreen}/>
         <ul className="products"/>
         {
           data.products.map(product => 
-            <li>
+        
             <div className="product">
                 <img className="product-image" src={product.image} alt="testProduct"/>
                 <div className="product-name">
@@ -60,7 +66,7 @@ function App() {
                 <div className="product-price">${product.price}</div>
                 <div className="product-rating">{product.rating} Stars ({product.numReviews} Ratings)</div>
             </div>
-        </li>)
+        )
         }
 
         <ul/>
@@ -70,7 +76,7 @@ function App() {
         MIT license, open source project!
     </footer>
 </div>
-
+</BrowserRouter>
   );
 }
 
