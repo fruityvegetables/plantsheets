@@ -1,6 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import data from './data';
 
 function App() {
 
@@ -38,74 +39,38 @@ function App() {
             <li>
                 <a href="index.html">Deciduous</a>
             </li>
+            <li>
+                <a href="index.html">Conifers</a>
+            </li>
+            
         </ul>
     </aside>
     <main className= "main"/>
         <div className="content"/>
         <ul className="products"/>
-            <li/>
-                <div className="product">
-                    <img className="product-image" src="./images/bonsaiSample1.jpg" alt="testProduct"/>
-                    <div className="product-name">
-                        <a href="product.html">Plant Name</a>
-                    </div>
-                    <div className="product-brand">Plant brand</div>
-                    <div className="price">$20</div>
-                    <div className="product-rating">4.5 stars</div>
-                </div>
-            <li/>
+        {
+          data.products.map(product => 
             <li>
-                <div className="product">
-                    <img className="product-image" src="./images/bonsaiSample1.jpg" alt="testProduct"/>
-                    <div className="product-name">
-                        <a href="product.html">Plant Name</a>
-                    </div>
-                    <div className="product-brand">Plant brand</div>
-                    <div className="price">$20</div>
-                    <div className="product-rating">4.5 stars</div>
+            <div className="product">
+                <img className="product-image" src={product.image} alt="testProduct"/>
+                <div className="product-name">
+                    <a href="product.html">{product.name}</a>
                 </div>
-            </li>
-            <li>
-                <div className="product">
-                    <img className="product-image" src="./images/bonsaiSample1.jpg" alt="testProduct"/>
-                    <div className="product-name">
-                        <a href="product.html">Plant Name</a>
-                    </div>
-                    <div className="product-brand">Plant brand</div>
-                    <div className="price">$20</div>
-                    <div className="product-rating">4.5 stars</div>
-                </div>
-            </li>
-            <li>
-                <div className="product">
-                    <img className="product-image" src="./images/bonsaiSample1.jpg" alt="testProduct"/>
-                    <div className="product-name">
-                        <a href="product.html">Plant Name</a>
-                    </div>
-                    <div className="product-brand">Plant brand</div>
-                    <div className="price">$20</div>
-                    <div className="product-rating">4.5 stars</div>
-                </div>
-            </li>
-            <li>
-                <div className="product">
-                    <img className="product-image" src="./images/bonsaiSample1.jpg" alt="testProduct"/>
-                    <div className="product-name">
-                        <a href="product.html">Plant Name</a>
-                    </div>
-                    <div className="product-brand">Plant brand</div>
-                    <div className="price">$20</div>
-                    <div className="product-rating">4.5 stars</div>
-                </div>
-            </li>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">${product.price}</div>
+                <div className="product-rating">{product.rating} Stars ({product.numReviews} Ratings)</div>
+            </div>
+        </li>)
+        }
+
         <ul/>
     <div/>
     <main/>
     <footer className = "footer">
         MIT license, open source project!
     </footer>
-<div/>
 </div>
+
   );
 }
 
