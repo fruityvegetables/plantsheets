@@ -8,7 +8,8 @@ export default {
         price: 20,
         brand: 'gt Bonsai',
         rating: 4.5,
-        numReviews: 10
+        numReviews: 10,
+        description: "this is my sample plant 1, a wisteria."
     },
     {
         _id: '2',
@@ -18,7 +19,9 @@ export default {
         price: 25,
         brand: 'gt Bonsai',
         rating: 4.7,
-        numReviews: 12
+        numReviews: 12,
+        description: "this is my sample plant 2, a tiny maple."
+
     },
     {
         _id: '3',
@@ -28,7 +31,9 @@ export default {
         price: 200,
         brand: 'gt Bonsai',
         rating: 4.9,
-        numReviews: 3
+        numReviews: 3,
+        description: "this is my sample plant 3, a massive and old juniper."
+
     },
 ]
 }
