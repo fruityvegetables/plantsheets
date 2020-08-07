@@ -1,6 +1,7 @@
 export default {
     products:[
         {
+        _id: '1',
         name: 'Plant example 1',
         category: 'Deciduous',
         image: '/images/bonsaiSample1.jpg',
@@ -10,6 +11,7 @@ export default {
         numReviews: 10
     },
     {
+        _id: '2',
         name: 'Plant example 2',
         category: 'Deciduous',
         image: '/images/bonsaiSample2.png',
@@ -19,6 +21,7 @@ export default {
         numReviews: 12
     },
     {
+        _id: '3',
         name: 'Plant example 3',
         category: 'Conifers',
         image: '/images/bonsaiSample3.jpeg',
@@ -26,6 +29,6 @@ export default {
         brand: 'gt Bonsai',
         rating: 4.9,
         numReviews: 3
-    }
+    },
 ]
 }
